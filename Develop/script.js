@@ -1,5 +1,4 @@
-// Characters
-// !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+// To generate a password, we need to add a variety of characters
 
 var specialChar = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 var upperChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -8,16 +7,49 @@ var numbers = "1234567890";
 
 
 // Get references to the #generate element
+// When I click on the button, I am getting a pop up window.
+
 var generateBtn = document.querySelector("#generate");
+
+function writePassword() {
+  var passLength = prompt("How many characters would you like your password to contain?"); // prompt
+  if (passLength < 8 || passLength > 128) {
+    console,log("User's answer:", passLength);
+    alert("ALERT: The password must be 8 - 128 characters.");
+  } else {
+    // https://www.w3schools.com/jsref/met_win_confirm.asp
+    confirm(passLength);
+  }
+  var passwordSpecialChar = confirm("Click OK to confirm including special characters.");
+  if confirm(passwordSpecialChar) == true {
+    else alert("You've opted out of using special characters.")
+  }
+
+  var passwordNumbers = confirm("Click OK to confirm including numeric characters."); 
+  if confirm(passwordNumbers) == true {
+    else alert("You've opted out of using numbers.")
+  }
+
+  var passwordLowerChar = confirm("Click OK to confirm including lowercase characters.");
+  if confirm(passwordLowerChar) == true {
+    else alert("You've opted out of using lower case characters.")
+  }
+
+  var passwordUpperChar = confirm("Click OK to confirm including uppercase characters.");
+  if confirm(passwordUpperChar) == true {
+    else alert("You've opted out of using upper case characters.")
+  }
+}
+
+if (!passwordSpecialChar && !passwordNumbers && !passwordLowerChar && !passwordUpperChar) {
+
+} else if()
 
 generatePassword = () {
 
 }
-var passwordLength = ("How many characters would you like your password to contain?");
-var passwordSpecialChar = ("Click OK to confirm including special characters.");
-var passwordNumbers = ("Click OK to confirm including numeric characters.")
-var passwordLowerChar =("Click OK to confirm including lowercase characters.")
-var password = "";
+
+
 
 // Write password to the #password input
 function writePassword() {
