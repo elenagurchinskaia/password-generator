@@ -14,6 +14,7 @@ function writePassword() {
   passwordText.value = password;
 }
 
+console.log("Your password:");
 // Then I select a password parameters.
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
 
